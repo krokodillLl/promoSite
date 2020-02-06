@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 public class MainController {
     private final static Logger logger = LoggerFactory.getLogger(MainController.class);
 
-    @GetMapping("/")
+    @GetMapping("/main")
     public String getMain(Model model) {
 
         return "main";

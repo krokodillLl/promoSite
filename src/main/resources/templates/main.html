@@ -4,16 +4,110 @@
     <meta charset="UTF-8">
     <title>Главная страница</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-
+    <link rel="stylesheet" type="text/css" href="css/main.css" />
 </head>
 <body>
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-dark">
+    <div class="container">
+<!--        <p class="navbar-brand"></p>-->
+        <div class="btn-group">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent" style="margin-left:50px;">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-item nav-link active" th:href="@{main}">Главная страница</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-item nav-link" th:href="@{projects}">Мои проекты</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<br><br><br><br>
 <div class="container">
-    <div class="col-md-12 text-md-center">И вот тут что-то писать и вставлять</div>
+    <div class="row">
+        <div class="col-md-6">
+            <img src="img/face.jpg" alt="Шадрин Кирилл" class="rounded">
+        </div>
+        <div class="col-md-6 text-center" id="main-text">
+            <br><br>
+            <p><b>Java</b></p>
+            <p>Junior Developer</p>
+            <p><b>Шадрин Кирилл</b></p>
+            <p>kirillshadrin2012@outlook.com</p>
+        </div>
+    </div>
 </div>
+<br><br><br><br><br><br><br><br>
+<div class="container" id="about-text">
+    <p class="text-center" style="font-size: 26pt"><b>О себе</b></p>
+    <div class="row">
+        <div class="col-md-6 text-center" id="education">
+            <a style="font-size: 26pt" href="#education" @click="isShow = !isShow">Образование</a>
+            <div v-show="isShow">
+                <p>Студент 3 курса Санкт-Петербургского университета СПБГЭТУ "ЛЭТИ" по направлению "Инфокоммуникационные технологии и системы связи".
+                Увлекаюсь программированием, почти все свободное время уделяю программированию на Java и изучению новых технологий с помощью курсов
+                JavaRush, Udemy, Stepik. Также реализую собственные проекты, которые можно увидеть на моей
+                странице в <a href="https://github.com/krokodillLl" target="_blank">github</a>.
+                Прошел стажировку в учебном центре компании Netcracker spb, защитил проект, о котором дальше:
+                -Проект представляет собой сервис для студентов, в котором при регистрации автоматически загружается расписание для выбранной группы
+                (путем парсинга страниц вузов). У старосты группы есть возможность добавлять учебные задания. Удобства придает интерактивный календарь,
+                    в котором можно увидеть текущие задачи группы.</p>
+            </div>
+        </div>
+        <div class="col-md-6 text-center" id="certificates">
+            <a style="font-size: 26pt" href="#certificates" @click="isShow = !isShow">Сертификаты</a>
+            <div v-show="isShow">
 
+            </div>
+        </div>
+        <div class="col-md-6 text-center" id="experience">
+            <a style="font-size: 26pt" href="#experience" @click="isShow = !isShow">Опыт работы</a>
+            <div v-show="isShow">
+                <p>В течение 4-х месяцев преподавал программирование на языке scratch в детской школе программирования
+                <a href="https://robbitclub.ru/" target="_blank">Robbit</a>.
+                    Прошел стажировку и успешно защитил проект в учебном центре компании Netcracker.</p>
+            </div>
+        </div>
+        <div class="col-md-6 text-center" id="stack">
+            <a style="font-size: 26pt" href="#stack" @click="isShow = !isShow">Стек технологий</a>
+            <div v-show="isShow">
+                <p>Spring boot</p>
+                <p>PostgreSQL</p>
+                <p>MongoDB</p>
+                <p>Vue.js</p>
+                <p>Библиотека jsoup</p>
+            </div>
+        </div>
+        <div class="col-md-6 text-center" id="expectations">
+            <a style="font-size: 26pt" href="#expectations" @click="isShow = !isShow">Ожидания от работы</a>
+            <div v-show="isShow">
+                <p>Возможность совмещать с учебой в вузе, реализация задач среднего уровня сложности, изучение новых стеков технологий
+                и укрепление знаний в уже изученных. Возможность карьерного роста по мере обучения и приобретения опыта.
+                    Готов к усердному обучению и ответственному отношению к поставленным задачам, по началу - даже за символическую плату.</p>
+            </div>
+        </div>
+        <div class="col-md-6 text-center" id="contacts">
+            <a style="font-size: 26pt" href="#contacts" @click="isShow = !isShow">Контакты</a>
+            <div v-show="isShow">
+            <p>Почта: kirillshadrin2012@outlook.com</p>
+            <p><a href="https://vk.com/krokodil_iz_z_ada" target="_blank">Вконтакте</a></p>
+            <p>Skype: kirillshadrin2012</p>
+        </div>
+    </div>
+</div>
+</div>
+<br><br><br><br>
 
+<script type="text/javascript" src="js/main.js"></script>
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
