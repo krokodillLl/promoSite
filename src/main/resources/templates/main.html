@@ -51,58 +51,176 @@
     <p class="text-center" style="font-size: 26pt"><b>О себе</b></p>
     <div class="row">
         <div class="col-md-6 text-center" id="education">
-            <a style="font-size: 26pt" href="#education" @click="isShow = !isShow">Образование</a>
-            <div v-show="isShow">
-                <p>Студент 3 курса Санкт-Петербургского университета СПБГЭТУ "ЛЭТИ" по направлению "Инфокоммуникационные технологии и системы связи".
-                Увлекаюсь программированием, почти все свободное время уделяю программированию на Java и изучению новых технологий с помощью курсов
-                JavaRush, Udemy, Stepik. Также реализую собственные проекты, которые можно увидеть на моей
-                странице в <a href="https://github.com/krokodillLl" target="_blank">github</a>.
-                Прошел стажировку в учебном центре компании Netcracker spb, защитил проект, о котором дальше:
-                -Проект представляет собой сервис для студентов, в котором при регистрации автоматически загружается расписание для выбранной группы
-                (путем парсинга страниц вузов). У старосты группы есть возможность добавлять учебные задания. Удобства придает интерактивный календарь,
-                    в котором можно увидеть текущие задачи группы.</p>
+            <button type="button" style="font-size: 26pt" class="btn btn-link" data-toggle="modal" data-target="#educationModal">
+                Образование
+            </button>
+            <div class="modal fade" id="educationModal" tabindex="-1" role="dialog" aria-labelledby="educationModalTitle" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="educationModalLongTitle">Образование</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <p>Студент 3 курса Санкт-Петербургского университета СПБГЭТУ "ЛЭТИ" по направлению "Инфокоммуникационные технологии и системы связи".
+                                Увлекаюсь программированием, почти все свободное время уделяю программированию на Java и изучению новых технологий с помощью курсов
+                                JavaRush, Udemy, Stepik. Также реализую собственные проекты, которые можно увидеть на моей
+                                странице в <a href="https://github.com/krokodillLl" target="_blank">github</a>.
+                                Прошел стажировку в учебном центре компании Netcracker spb, защитил проект, о котором дальше:
+                                -Проект представляет собой сервис для студентов, в котором при регистрации автоматически загружается расписание для выбранной группы
+                                (путем парсинга страниц вузов). У старосты группы есть возможность добавлять учебные задания. Удобства придает интерактивный календарь,
+                                в котором можно увидеть текущие задачи группы.</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="col-md-6 text-center" id="certificates">
-            <a style="font-size: 26pt" href="#certificates" @click="isShow = !isShow">Сертификаты</a>
-            <div v-show="isShow">
 
+        <div class="col-md-6 text-center" id="certificates">
+                <button type="button" style="font-size: 26pt" class="btn btn-link" data-toggle="modal" data-target="#certificatesModal">
+                    Сертификаты
+                </button>
+                <div class="modal fade" id="certificatesModal" tabindex="-1" role="dialog" aria-labelledby="certificatesModalTitle" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="certificatesModalLongTitle">Сертификаты</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <p ><img src="img/maven.jpeg" alt="Maven" class="rounded"></p>
+                                <p ><img src="img/Netcracker.jpeg" alt="Netcracker" class="rounded"></p>
+                                <p ><img src="img/SQL.jpeg" alt="SQL" class="rounded"></p>
+                                <p ><img src="img/tutorialSolo.jpeg" alt="tutorialSolo" class="rounded"></p>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
+                            </div>
+                        </div>
+                    </div>
             </div>
         </div>
+
         <div class="col-md-6 text-center" id="experience">
-            <a style="font-size: 26pt" href="#experience" @click="isShow = !isShow">Опыт работы</a>
-            <div v-show="isShow">
-                <p>В течение 4-х месяцев преподавал программирование на языке scratch в детской школе программирования
-                <a href="https://robbitclub.ru/" target="_blank">Robbit</a>.
-                    Прошел стажировку и успешно защитил проект в учебном центре компании Netcracker.</p>
+            <button type="button" style="font-size: 26pt" class="btn btn-link" data-toggle="modal" data-target="#experienceModal">
+                Опыт работы
+            </button>
+            <div class="modal fade" id="experienceModal" tabindex="-1" role="dialog" aria-labelledby="experienceModalTitle" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="experienceModalLongTitle">Опыт работы</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <p>В течение 4-х месяцев преподавал программирование на языке scratch в детской школе программирования
+                                <a href="https://robbitclub.ru/" target="_blank">Robbit</a>.
+                                Прошел стажировку и успешно защитил проект в учебном центре компании Netcracker.</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
+
         <div class="col-md-6 text-center" id="stack">
-            <a style="font-size: 26pt" href="#stack" @click="isShow = !isShow">Стек технологий</a>
-            <div v-show="isShow">
-                <p>Spring boot</p>
-                <p>PostgreSQL</p>
-                <p>MongoDB</p>
-                <p>Vue.js</p>
-                <p>Библиотека jsoup</p>
+            <button type="button" style="font-size: 26pt" class="btn btn-link" data-toggle="modal" data-target="#stackModal">
+                Стек технологий
+            </button>
+            <div class="modal fade" id="stackModal" tabindex="-1" role="dialog" aria-labelledby="stackModalTitle" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="stackModalLongTitle">Стек технологий</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <p>Java 8</p>
+                            <p>Spring boot</p>
+                            <p>Jsoup</p>
+                            <p>Maven</p>
+                            <p>Thymeleaf</p>
+                            <p>Tomcat</p>
+                            <p>Hibernate</p>
+                            <p>Slf4j</p>
+                            <p>PostgreSQL</p>
+                            <p>MongoDB</p>
+                            <p>Vue.js</p>
+                            <p>Bootstrap</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
+
         <div class="col-md-6 text-center" id="expectations">
-            <a style="font-size: 26pt" href="#expectations" @click="isShow = !isShow">Ожидания от работы</a>
-            <div v-show="isShow">
-                <p>Возможность совмещать с учебой в вузе, реализация задач среднего уровня сложности, изучение новых стеков технологий
-                и укрепление знаний в уже изученных. Возможность карьерного роста по мере обучения и приобретения опыта.
-                    Готов к усердному обучению и ответственному отношению к поставленным задачам, по началу - даже за символическую плату.</p>
+            <button type="button" style="font-size: 26pt" class="btn btn-link" data-toggle="modal" data-target="#expectationsModal">
+                Ожидания от работы
+            </button>
+            <div class="modal fade" id="expectationsModal" tabindex="-1" role="dialog" aria-labelledby="expectationsModalTitle" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="expectationsModalLongTitle">Ожидания от работы</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <p>Возможность совмещать с учебой в вузе (20-30 часов работы в неделю), реализация задач среднего уровня сложности, изучение новых стеков технологий
+                                и укрепление знаний в уже изученных. Возможность карьерного роста по мере обучения и приобретения опыта.
+                                Готов к усердному обучению и ответственному отношению к поставленным задачам.</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
+
         <div class="col-md-6 text-center" id="contacts">
-            <a style="font-size: 26pt" href="#contacts" @click="isShow = !isShow">Контакты</a>
-            <div v-show="isShow">
-            <p>Почта: kirillshadrin2012@outlook.com</p>
-            <p><a href="https://vk.com/krokodil_iz_z_ada" target="_blank">Вконтакте</a></p>
-            <p>Skype: kirillshadrin2012</p>
-        </div>
+            <button type="button" style="font-size: 26pt" class="btn btn-link" data-toggle="modal" data-target="#contactsModal">
+                Контакты
+            </button>
+            <div class="modal fade" id="contactsModal" tabindex="-1" role="dialog" aria-labelledby="contactsModalTitle" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="contactsModalLongTitle">Контакты</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <p>Почта: kirillshadrin2012@outlook.com</p>
+                            <p><a href="https://vk.com/krokodil_iz_z_ada" target="_blank">Вконтакте</a></p>
+                            <p>Skype: kirillshadrin2012</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
     </div>
+
 </div>
 </div>
 <br><br><br><br>

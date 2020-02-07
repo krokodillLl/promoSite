@@ -5,6 +5,13 @@ var edu = new Vue({
     },
 });
 
+var certif = new Vue({
+    el: '#certificates',
+    data: {
+        isShow: false,
+    },
+});
+
 var exp = new Vue({
     el: '#experience',
     data: {
