@@ -34,27 +34,130 @@
 <br><br><br><br>
 <div class="container">
     <div class="row">
-<!--        Netcracker project-->
-        <div class="col-md-6 text-center">
-            <img src="img/profile+Schedule.jpg">
-            <p>Профиль и расписание для проекта в Netcracker</p>
+        <!--        Netcracker project-->
+        <div class="col-md-6 text-center" id="netcrackerProject">
+            <p class="font-weight-bold">Учебный проект, выполненный в Netcracker spb</p>
+            <a href="#netcrackerProject" @click="isShow = !isShow">Описание</a>
+            <p v-if="isShow">Проект представляет собой сервис для студентов, в котором при регистрации автоматически загружается расписание для выбранной группы
+                (путем парсинга страниц вузов). У старосты группы есть возможность добавлять учебные задания. Удобства придает интерактивный календарь,
+                в котором можно увидеть текущие задачи группы.</p>
         </div>
-        <div class="col-md-6 text-center">
-            <img src="img/tasks+Calendar.jpg">
-            <p>Задания и расписание для проекта в Netcracker</p>
+
+        <div class="col-md-3 text-center">
+            <button type="button" style="font-size: 26pt" class="btn btn-link" data-toggle="modal" data-target="#netcrackerScreenModal">
+                Скриншоты
+            </button>
+            <div class="modal fade" id="netcrackerScreenModal" tabindex="-1" role="dialog" aria-labelledby="netcrackerScreenModalTitle" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered  modal-lg" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="netcrackerScreenModalLongTitle">Скриншоты</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <img src="img/netcrackerProfile.jpg">
+                            <p>Профиль</p>
+                            <img src="img/netcrackerSchedule.jpg">
+                            <p>Расписание</p>
+                            <img src="img/netcrackerTasks.jpg">
+                            <p>Задания</p>
+                            <img src="img/netcrackerCalendar.jpg">
+                            <p>Календарь</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="col-md-6 text-center">
-            <img src="img/snakeMain.jpg">
-            <p>Главная страница змейки</p>
+        <div class="col-md-3 text-center">
+            <button type="button" style="font-size: 26pt" class="btn btn-link" data-toggle="modal" data-target="#netcrackerVideoModal">
+                Видео
+            </button>
+            <div class="modal fade" id="netcrackerVideoModal" tabindex="-1" role="dialog" aria-labelledby="netcrackerVideoModalTitle" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered  modal-lg" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="netcrackerVideoModalLongTitle">Видео</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+<!--                      Тут видео -->
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-<!--        Snake game-->
-        <div class="col-md-6 text-center">
-            <img src="img/snakeOptions.jpg">
-            <p>Страниа настроек змейки</p>
+    </div>
+</div>
+<br><br><hr><br><br>
+<div class="container">
+    <div class="row">
+        <!--        Snake game-->
+        <div class="col-md-6 text-center" id="snakeGame">
+            <p class="font-weight-bold">Игра змейка, написанная на Java</p>
+            <a href="#snakeGame" @click="isShow = !isShow">Описание</a>
+                <p v-if="isShow">Интерактивное оконное приложение, созданное с целью развлечения и тренировки</p>
         </div>
-        <div class="col-md-6 text-center">
-            <img src="img/snakeGame.jpg">
-            <p>Процесс игры в змейку</p>
+
+        <div class="col-md-3 text-center">
+            <button type="button" style="font-size: 26pt" class="btn btn-link" data-toggle="modal" data-target="#snakeScreenModal">
+                Скриншоты
+            </button>
+            <div class="modal fade" id="snakeScreenModal" tabindex="-1" role="dialog" aria-labelledby="snakeScreenModalTitle" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered  modal-lg" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="snakeScreenModalLongTitle">Скриншоты</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <img src="img/snakeMain.jpg">
+                            <p>Главная страница</p>
+                            <img src="img/snakeOptions.jpg">
+                            <p>Страниа настроек</p>
+                            <img src="img/snakeGame.jpg">
+                            <p>Процесс игры</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 text-center">
+            <button type="button" style="font-size: 26pt" class="btn btn-link" data-toggle="modal" data-target="#snakeVideoModal">
+                Видео
+            </button>
+            <div class="modal fade" id="snakeVideoModal" tabindex="-1" role="dialog" aria-labelledby="snakeVideoModalTitle" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered  modal-lg" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="snakeVideoModalLongTitle">Видео</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <!--                      Тут видео -->
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>
@@ -62,7 +165,7 @@
 
 <br><br><br><br>
 
-<script type="text/javascript" src="js/main.js"></script>
+<script type="text/javascript" src="js/projects.js"></script>
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
