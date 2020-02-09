@@ -19,6 +19,11 @@
         </div>
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent" style="margin-left:50px;">
+            <ul class="navbar-nav mr-auto" th:if="${button.equals('true')}">
+                <li class="nav-item">
+                    <a class="nav-item nav-link" th:href="@{/edit}">Редактировать</a>
+                </li>
+            </ul>
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item active">
                     <a class="nav-item nav-link active" th:href="@{main}">Главная страница</a>
@@ -29,199 +34,16 @@
             </ul>
         </div>
     </div>
+    <form th:action="@{/login}" method="get" th:if="${button.equals('false')}">
+        <button class="btn btn-light" type="submit">Вход</button>
+    </form>
+    <form th:action="@{/logout}" method="post" th:if="${button.equals('true')}">
+        <button class="btn btn-light" type="submit">Выйти</button>
+    </form>
 </nav>
-<br><br><br><br>
-<div class="container">
-    <div class="row">
-        <div class="col-md-6">
-            <img src="img/face.jpg" alt="Шадрин Кирилл" class="rounded">
-        </div>
-        <div class="col-md-6 text-center" id="main-text">
-            <br><br>
-            <p><b>Java</b></p>
-            <p>Junior Developer</p>
-            <p><b>Шадрин Кирилл</b></p>
-            <p>kirillshadrin2012@outlook.com</p>
-        </div>
-    </div>
-</div>
-<br><br><br><br><br><br><br><br>
-<div class="container" id="about-text">
-    <p class="text-center" style="font-size: 26pt"><b>О себе</b></p>
-    <div class="row">
-        <div class="col-md-6 text-center" id="education">
-            <button type="button" style="font-size: 26pt" class="btn btn-link" data-toggle="modal" data-target="#educationModal">
-                Образование
-            </button>
-            <div class="modal fade" id="educationModal" tabindex="-1" role="dialog" aria-labelledby="educationModalTitle" aria-hidden="true">
-                <div class="modal-dialog modal-dialog-centered" role="document">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="educationModalLongTitle">Образование</h5>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
-                        </div>
-                        <div class="modal-body">
-                            <p>Студент 3 курса Санкт-Петербургского университета СПБГЭТУ "ЛЭТИ" по направлению "Инфокоммуникационные технологии и системы связи".
-                                Увлекаюсь программированием, почти все свободное время уделяю программированию на Java и изучению новых технологий с помощью курсов
-                                JavaRush, Udemy, Stepik. Также реализую собственные проекты, которые можно увидеть на моей
-                                странице в <a href="https://github.com/krokodillLl" target="_blank">github</a>.
-                                Прошел стажировку в учебном центре компании Netcracker spb, защитил проект, о котором дальше:
-                                -Проект представляет собой сервис для студентов, в котором при регистрации автоматически загружается расписание для выбранной группы
-                                (путем парсинга страниц вузов). У старосты группы есть возможность добавлять учебные задания. Удобства придает интерактивный календарь,
-                                в котором можно увидеть текущие задачи группы.</p>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-md-6 text-center" id="certificates">
-                <button type="button" style="font-size: 26pt" class="btn btn-link" data-toggle="modal" data-target="#certificatesModal">
-                    Сертификаты
-                </button>
-                <div class="modal fade" id="certificatesModal" tabindex="-1" role="dialog" aria-labelledby="certificatesModalTitle" aria-hidden="true">
-                    <div class="modal-dialog modal-dialog-centered" role="document">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h5 class="modal-title" id="certificatesModalLongTitle">Сертификаты</h5>
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                                </button>
-                            </div>
-                            <div class="modal-body">
-                                <p ><img src="img/maven.jpeg" alt="Maven" class="rounded"></p>
-                                <p ><img src="img/Netcracker.jpeg" alt="Netcracker" class="rounded"></p>
-                                <p ><img src="img/SQL.jpeg" alt="SQL" class="rounded"></p>
-                                <p ><img src="img/tutorialSolo.jpeg" alt="tutorialSolo" class="rounded"></p>
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
-                            </div>
-                        </div>
-                    </div>
-            </div>
-        </div>
-
-        <div class="col-md-6 text-center" id="experience">
-            <button type="button" style="font-size: 26pt" class="btn btn-link" data-toggle="modal" data-target="#experienceModal">
-                Опыт работы
-            </button>
-            <div class="modal fade" id="experienceModal" tabindex="-1" role="dialog" aria-labelledby="experienceModalTitle" aria-hidden="true">
-                <div class="modal-dialog modal-dialog-centered" role="document">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="experienceModalLongTitle">Опыт работы</h5>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
-                        </div>
-                        <div class="modal-body">
-                            <p>В течение 4-х месяцев преподавал программирование на языке scratch в детской школе программирования
-                                <a href="https://robbitclub.ru/" target="_blank">Robbit</a>.
-                                Прошел стажировку и успешно защитил проект в учебном центре компании Netcracker.</p>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-md-6 text-center" id="stack">
-            <button type="button" style="font-size: 26pt" class="btn btn-link" data-toggle="modal" data-target="#stackModal">
-                Стек технологий
-            </button>
-            <div class="modal fade" id="stackModal" tabindex="-1" role="dialog" aria-labelledby="stackModalTitle" aria-hidden="true">
-                <div class="modal-dialog modal-dialog-centered" role="document">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="stackModalLongTitle">Стек технологий</h5>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
-                        </div>
-                        <div class="modal-body">
-                            <p>Java 8</p>
-                            <p>Spring boot</p>
-                            <p>Jsoup</p>
-                            <p>Maven</p>
-                            <p>Thymeleaf</p>
-                            <p>Tomcat</p>
-                            <p>Hibernate</p>
-                            <p>Slf4j</p>
-                            <p>PostgreSQL</p>
-                            <p>MongoDB</p>
-                            <p>Vue.js</p>
-                            <p>Bootstrap</p>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-md-6 text-center" id="expectations">
-            <button type="button" style="font-size: 26pt" class="btn btn-link" data-toggle="modal" data-target="#expectationsModal">
-                Ожидания от работы
-            </button>
-            <div class="modal fade" id="expectationsModal" tabindex="-1" role="dialog" aria-labelledby="expectationsModalTitle" aria-hidden="true">
-                <div class="modal-dialog modal-dialog-centered" role="document">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="expectationsModalLongTitle">Ожидания от работы</h5>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
-                        </div>
-                        <div class="modal-body">
-                            <p>Возможность совмещать с учебой в вузе (20-30 часов работы в неделю), реализация задач среднего уровня сложности, изучение новых стеков технологий
-                                и укрепление знаний в уже изученных. Возможность карьерного роста по мере обучения и приобретения опыта.
-                                Готов к усердному обучению и ответственному отношению к поставленным задачам.</p>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-md-6 text-center" id="contacts">
-            <button type="button" style="font-size: 26pt" class="btn btn-link" data-toggle="modal" data-target="#contactsModal">
-                Контакты
-            </button>
-            <div class="modal fade" id="contactsModal" tabindex="-1" role="dialog" aria-labelledby="contactsModalTitle" aria-hidden="true">
-                <div class="modal-dialog modal-dialog-centered" role="document">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="contactsModalLongTitle">Контакты</h5>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
-                        </div>
-                        <div class="modal-body">
-                            <p>Почта: kirillshadrin2012@outlook.com</p>
-                            <p><a href="https://vk.com/krokodil_iz_z_ada" target="_blank">Вконтакте</a></p>
-                            <p>Skype: kirillshadrin2012</p>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-    </div>
-
-</div>
-</div>
+<!--Здесь вставляется кусок из монго -->
+<div th:utext="${html}"></div>
+<!--Здесь вставляется кусок из монго -->
 <br><br><br><br>
 
 <script type="text/javascript" src="js/main.js"></script>
