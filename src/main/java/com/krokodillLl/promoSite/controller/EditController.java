@@ -48,12 +48,20 @@ public class EditController {
             mainPage.setHtml(newMainHtml);
             mainPageService.saveMainPage(mainPage);
         }
+        else if(mainPage.getHtml() == null) {
+            mainPage.setHtml(newMainHtml);
+            mainPageService.saveMainPage(mainPage);
+        }
 
         ProjectsPage projectsPage = projectsPageService.getProjectsPage();
         if(projectsPage == null) {
             projectsPage = new ProjectsPage();
         }
         if(projectsPage.getHtml() != null && !projectsPage.getHtml().equals(newProjectsHtml)) {
+            projectsPage.setHtml(newProjectsHtml);
+            projectsPageService.saveProjectsPage(projectsPage);
+        }
+        else if(projectsPage.getHtml() == null) {
             projectsPage.setHtml(newProjectsHtml);
             projectsPageService.saveProjectsPage(projectsPage);
         }
