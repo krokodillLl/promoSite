@@ -7,12 +7,11 @@
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="css/main.css" />
+    <link rel="stylesheet" type="text/css" href="css/projects.css" />
 </head>
 <body>
 <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-dark">
     <div class="container">
-        <!--        <p class="navbar-brand"></p>-->
         <div class="btn-group">
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -34,13 +33,14 @@
 <br><br><br><br>
 <div class="container">
     <div class="row">
-        <!--        Netcracker project-->
+        <!-- Netcracker project-->
         <div class="col-md-6 text-center" id="netcrackerProject">
-            <p class="font-weight-bold">Учебный проект, выполненный в Netcracker spb</p>
-            <a href="#netcrackerProject" @click="isShow = !isShow">Описание</a>
+            <p class="font-weight-bold" style="font-size: 18pt">Учебный проект, выполненный в Netcracker spb</p>
+            <p class="font-italic" style="color: brown">Java 8, Spring boot, Hibernate, Vue.js, PostgreSQL, MongoDB, Jsoup</p>
+            <a href="#netcrackerProject" @click="isShow = !isShow" style="font-size: 18pt">Описание</a>
             <p v-if="isShow">Проект представляет собой сервис для студентов, в котором при регистрации автоматически загружается расписание для выбранной группы
                 (путем парсинга страниц вузов). У старосты группы есть возможность добавлять учебные задания. Удобства придает интерактивный календарь,
-                в котором можно увидеть текущие задачи группы.</p>
+                в котором можно увидеть текущие задачи группы. <a href="https://github.com/krokodillLl/academ_resource" target="_blank">github</a></p>
         </div>
 
         <div class="col-md-3 text-center">
@@ -87,7 +87,10 @@
                             </button>
                         </div>
                         <div class="modal-body">
-<!--                      Тут видео -->
+                            <div class="embed-responsive embed-responsive-16by9">
+                                <iframe src="https://www.youtube.com/embed/kR-u8M0F7_M"
+                                        class="embed-responsive-item allowfullscreen"></iframe>
+                            </div>
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
@@ -101,11 +104,15 @@
 <br><br><hr><br><br>
 <div class="container">
     <div class="row">
-        <!--        Snake game-->
+        <!-- Snake game-->
         <div class="col-md-6 text-center" id="snakeGame">
-            <p class="font-weight-bold">Игра змейка, написанная на Java</p>
-            <a href="#snakeGame" @click="isShow = !isShow">Описание</a>
-                <p v-if="isShow">Интерактивное оконное приложение, созданное с целью развлечения и тренировки</p>
+            <p class="font-weight-bold" style="font-size: 18pt">Игра змейка</p>
+            <p class="font-italic" style="color: brown">Java 8</p>
+            <a href="#snakeGame" @click="isShow = !isShow" style="font-size: 18pt">Описание</a>
+                <p v-if="isShow">Интерактивное оконное приложение, созданное с целью развлечения и тренировки, имеет функцию
+                    смены управления и подсчета результатов. Имеется 3 вида яблок: замедляющие, ускоряющие и обыче.
+                    Мой первый проект на Java.
+                    <a href="https://github.com/krokodillLl/snakeGame" target="_blank">github</a></p>
         </div>
 
         <div class="col-md-3 text-center">
@@ -150,7 +157,10 @@
                             </button>
                         </div>
                         <div class="modal-body">
-                            <!--                      Тут видео -->
+                            <div class="embed-responsive embed-responsive-16by9">
+                                <iframe src="https://www.youtube.com/embed/rGnLUTP1Cj0"
+                                        class="embed-responsive-item allowfullscreen"></iframe>
+                            </div>
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
@@ -164,6 +174,35 @@
 
 
 <br><br><br><br>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12 text-center" id="contacts">
+            <button type="button" style="font-size: 18pt" class="btn btn-link" data-toggle="modal" data-target="#contactsModal">
+                Контакты
+            </button>
+            <div class="modal fade" id="contactsModal" tabindex="-1" role="dialog" aria-labelledby="contactsModalTitle" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="contactsModalLongTitle">Контакты</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <p>Почта: kirillshadrin2012@outlook.com</p>
+                            <p><a href="https://vk.com/krokodil_iz_z_ada" target="_blank">Вконтакте</a></p>
+                            <p>Skype: kirillshadrin2012</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
 <script type="text/javascript" src="js/projects.js"></script>
 <!-- Optional JavaScript -->
