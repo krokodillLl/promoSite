@@ -44,14 +44,18 @@ public class EditController {
         if(mainPage == null) {
             mainPage = new MainPage();
         }
-        mainPage.setHtml(newMainHtml);
-        mainPageService.saveMainPage(mainPage);
+        if(mainPage.getHtml() != null && ! mainPage.getHtml().equals(newMainHtml)) {
+            mainPage.setHtml(newMainHtml);
+            mainPageService.saveMainPage(mainPage);
+        }
 
         ProjectsPage projectsPage = projectsPageService.getProjectsPage();
         if(projectsPage == null) {
             projectsPage = new ProjectsPage();
         }
-        projectsPage.setHtml(newProjectsHtml);
-        projectsPageService.saveProjectsPage(projectsPage);
+        if(projectsPage.getHtml() != null && !projectsPage.getHtml().equals(newProjectsHtml)) {
+            projectsPage.setHtml(newProjectsHtml);
+            projectsPageService.saveProjectsPage(projectsPage);
+        }
     }
 }
